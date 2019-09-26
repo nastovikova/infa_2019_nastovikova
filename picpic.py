@@ -56,7 +56,7 @@ def yacht(x, y, s): # x,y основание мачты, s - размер (1>2>.
     penColor('white')
     brushColor(230, 230, 250)
     polygon([(x+d,y-a), (x+d+c,y-a/2), (x+d+c/4,y-a/2)])
-    polygon([(x+d,y), (x+d+c,y-a/2), (x+d++c/4,y-a/2)])
+    polygon([(x+d,y), (x+d+c,y-a/2), (x+d+c/4,y-a/2)])
     brushColor(170, 102, 0)
     penColor(170, 102, 0)
     rectangle(x-a/2, y, x+a/2, y+b)
