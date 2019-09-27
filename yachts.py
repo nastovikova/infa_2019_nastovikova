@@ -71,6 +71,17 @@ def sun(xc, yc, r, ray): # центр, радиус, длина луча  +  р�
         phi2 = 2 * (i+1) * pi / v
         polygon ([(xc, yc), (xc  +  r*cos(phi1), yc  +  r*sin(phi1)), (xc  +  ray*cos(phi1 + pi/v), yc  +  ray*sin(phi1 + pi/v)), (xc  +  r*cos(phi2), yc  +  r*sin(phi2))])
 
+def waves(y): # y-координата границы моря с песком
+    penSize(0)
+    r = 40
+    n = 15
+    for i in range(n):
+        x = i * r * 2 * sqrt(3)
+        brushColor(0, 0, 205)
+        circle(x - r*sqrt(3)/2, y - r/2, r) 
+        brushColor(255, 229, 124)
+        circle(x + r*sqrt(3)/2, y + r/2, r) 
+
 # фон
 canvasSize(1000, 600)
 brushColor(135, 206, 250)
@@ -79,6 +90,7 @@ brushColor(255, 229, 124)
 rectangle(0, 600, 1000, 500)
 brushColor(0, 0, 205)
 rectangle(0, 300, 1000, 500)
+waves(500)
 
 # предметы
 sun(850, 100, 55, 80)
