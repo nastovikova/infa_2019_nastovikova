@@ -14,7 +14,7 @@ def cloud(x, y, r):   # center of the upper left circle, rads
     circle(x + 3.5*r, y + r, r)
 
 
-def umbrella(x, y, h):   # where to put the leg, leg length
+def umbrella(x, y, h):   # where to put the stick, stick length
     penColor(170, 102, 0)
     penSize(h/20)
     moveTo(x, y)
