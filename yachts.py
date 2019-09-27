@@ -22,7 +22,7 @@ def umbrella(x, y, h): # куда воткнули ножку, длина нож
     polygon([(x + h/40, y - h), (x - h/40, y - h), (x - h/2, y - 5/6*h), (x + h/2, y - 5/6*h)])
     penSize(3)
     penColor('brown')
-    for i in range(3): # полоски на зонте (2 цикла)
+    for i in range(3): # полоски на зонте 
         moveTo(x - h/40, y - h)
         lineTo(x - h/2 + (i+1) * 0.15*h, y - 5/6*h)
     for i in range(3):
@@ -41,7 +41,7 @@ def yacht(x, y, s): # x, y основание мачты, s  -  размер (1>
     lineTo(x, y - mast) 
     # парус
     penSize(thi/15)
-    penColor('white')
+    penColor(230, 230, 250)
     brushColor(230, 230, 250)
     polygon([(x + col, y - mast), (x + col + bow, y - mast/2), (x + col + bow/4, y - mast/2)])
     polygon([(x + col, y), (x + col + bow, y - mast/2), (x + col + bow/4, y - mast/2)])
@@ -83,11 +83,14 @@ def waves(y): # y-координата границы моря с песком
         circle(x + r*sqrt(3)/2, y + r/2, r) 
 
 # фон
+# небо
 canvasSize(1000, 600)
 brushColor(135, 206, 250)
 rectangle(0, 0, 1000, 300)
+# песок
 brushColor(255, 229, 124)
 rectangle(0, 600, 1000, 500)
+# море
 brushColor(0, 0, 205)
 rectangle(0, 300, 1000, 500)
 waves(500)
