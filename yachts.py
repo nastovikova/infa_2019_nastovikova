@@ -101,7 +101,7 @@ def view():
     brushColor(0, 0, 205)  # море
     rectangle(0, 300, 1000, 500)
 
-
+# lol
 view()
 waves(500)
 sun(850, 100, 55, 80)
