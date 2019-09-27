@@ -1,4 +1,3 @@
-
 from graph import *
 from math import *
 
@@ -82,20 +81,21 @@ def waves(y): # y-координата границы моря с песком
         brushColor(255, 229, 124)
         circle(x + r*sqrt(3)/2, y + r/2, r) 
 
-# фон
-# небо
-canvasSize(1000, 600)
-brushColor(135, 206, 250)
-rectangle(0, 0, 1000, 300)
-# песок
-brushColor(255, 229, 124)
-rectangle(0, 600, 1000, 500)
-# море
-brushColor(0, 0, 205)
-rectangle(0, 300, 1000, 500)
-waves(500)
+def view()
+    # небо
+    canvasSize(1000, 600)
+    brushColor(135, 206, 250)
+    rectangle(0, 0, 1000, 300)
+    # песок
+    brushColor(255, 229, 124)
+    rectangle(0, 600, 1000, 500)
+    # море
+    brushColor(0, 0, 205)
+    rectangle(0, 300, 1000, 500)
+    waves(500)
 
-# предметы
+# программа
+view()
 sun(850, 100, 55, 80)
 cloud(110, 65, 22)
 cloud(470, 60, 42)
