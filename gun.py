@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from random import randrange as rnd, choice
 import tkinter as tk
 import math
@@ -51,14 +53,16 @@ class ball():
         self.x и self.y с учетом скоростей self.vx и self.vy, силы гравитации, действующей на мяч,
         и стен по краям окна (размер окна 800х600).
         """
+        t = 15 / 1000
         # FIXME
         if (self.x + self.r == 800) or (self.x - self.r == 0):
             self.vx = -1 * self.vx
         if (self.y + self.r == 600) or (self.y - self.r == 0):
             self.vy = -1*self.vy
-        self.x += self.vx
-        self.y -= self.vy
-        self.vy += 9.8 * 15/1000
+        self.x += self.vx * t
+        self.y += self.vy * t
+        self.set_coords()
+        self.vy += 60 * t
         root.after(15, self.move)
 
 
